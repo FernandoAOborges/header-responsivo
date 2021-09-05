@@ -1,0 +1,50 @@
+:root {
+  --var_corPrincipal: brown;
+  --var_Bold: 700;
+}
+
+header {
+  background-color: var(--var_corPrincipal);
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo a {
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: var(--var_Bold);
+}
+
+.lista {
+  list-style-type: none;
+  display: flex;
+}
+
+.lista li {
+  /* background-color: white; */
+  margin-left: 30px;
+  /* padding: 5px 15px; */
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+.lista li a {
+  color: var(--var_corPrincipal);
+  padding: 5px 15px;
+  font-weight: var(--var_Bold);
+  text-transform: capitalize;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.lista li a:hover,
+.lista li a.ativo {
+  background-color: black;
+  color: white;
+}
