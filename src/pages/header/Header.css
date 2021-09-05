@@ -31,7 +31,6 @@ header {
   margin-left: 30px;
   /* padding: 5px 15px; */
   border-radius: 7px;
-  text-decoration: none;
 }
 
 .lista li a {
@@ -40,6 +39,7 @@ header {
   font-weight: var(--var_Bold);
   text-transform: capitalize;
   background-color: white;
+  text-decoration: none;
   border-radius: 5px;
 }
 
@@ -48,3 +48,57 @@ header {
   background-color: black;
   color: white;
 }
+
+.menu-icon {
+  font-size: 2rem;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .lista {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    align-items: center;
+    top: 15%;
+    background-color: rgba(165, 42, 42, 0.3);
+    padding: 30px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .lista li:first-child {
+    margin-bottom: 30px;
+  }
+  .lista li a {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .lista.fechar {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .fas.fa-times {
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out;
+  }
+  .fas.fa-bars {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+  }
+} ;

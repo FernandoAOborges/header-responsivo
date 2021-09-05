@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [abrir, setAbrir] = useState(false);
+
   return (
     <header>
       <div className="logo">
@@ -10,7 +12,10 @@ const Header = () => {
       </div>
 
       <nav>
-        <ul className="lista">
+        <div className="menu-icon" onClick={() => setAbrir(!abrir)}>
+          <i className={abrir ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={abrir ? "lista" : "lista fechar"}>
           <li>
             <NavLink activeClassName="ativo" to="/" exact>
               principal
